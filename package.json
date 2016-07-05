@@ -1,8 +1,8 @@
 {
   "name": "redux-async-get",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "for redux easy to fetch the data from GET method",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib dist es",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,6 +13,12 @@
     "build:umd": "cross-env BABEL_ENV=commonjs NODE_ENV=development webpack",
     "build:umd:min": "cross-env BABEL_ENV=commonjs NODE_ENV=production webpack"
   },
+  "files": [
+    "lib",
+    "es",
+    "src",
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/madeinfree/redux-async-get.git"

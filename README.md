@@ -14,7 +14,17 @@ npm install redux-async-get
 Easily for your redux action code.
 
 ```javascript
-const FetchUsers = () => (
+import { createStore, applyMiddleware } from 'redux'
+import getAsyncMiddleware from 'redux-async-get'
+
+const store = createStore(
+  rootReducer,
+  preloadedState,
+  applyMiddleware(getAsyncMiddleware) // use in middleware
+)
+
+// in your action
+const FetchUsers = (params) => (
   {
     url: 'https://randomuser.me/api/',
     done: (result, dispatch) => {
